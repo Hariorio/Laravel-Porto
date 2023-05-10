@@ -36,6 +36,10 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
     </div>
+    <form action="{{ route('logout') }}" method="POST">
+      @csrf
+      <button type="submit">Logout</button>
+  </form>
   </header>
   <main id="main">
     <section id="breadcrumbs" class="breadcrumbs">
@@ -51,19 +55,13 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-8">
-                @foreach ($teams as $team)
-                <li>
-                    <img src="{{ $team->logo }}" alt="Logo Tim">
-                </li>
-                @endforeach
+                
             </div>
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Information TIm</h3>
               <ul>
-                <li><strong>Nama Tim </strong><h2>{{ $team->name }}</h2></li>
-                <li><strong>Deskripsi Tim</strong><p>{{ $team->description }}</p></li>
-                <li><strong>Achievement Tim</strong><p>Achievement: {{ $team->achievement }}</p></li>
+                
               </ul>
             </div>
             <div class="portfolio-description">
@@ -94,22 +92,7 @@
     <div class="footer-top">
         <div class="container">
             <div class="row" style="margin-right: -516px; margin-left: 10px;">
-                @foreach ($players as $player)
-                    <div class="col-md-2">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body player-card">
-                                <h4>Player</h4>
-                                <h2>{{ $player->name }}</h2>
-                                <img src="{{ $player->photo }}" alt="Foto Pemain">
-                                <p>IGN: {{ $player->ign }}</p>
-                                <p>
-                                    <a href="{{ $player->instagram }}">Instagram</a> |
-                                    <a href="{{ $player->facebook }}">Facebook</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+                
             </div>
         </div>
     </div>
