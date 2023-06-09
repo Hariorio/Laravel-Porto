@@ -8,66 +8,65 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/my-login.css">
 </head>
-
-<body class="my-login-page">
-	<section class="h-100">
-		<div class="container h-100">
-			<div class="row justify-content-md-center h-100">
-				<div class="card-wrapper">
-					<div class="brand">
-						<img src="img/logo.jpg" alt="logo">
-					</div>
-          <div class="card fat">
-            <div class="card-body">
-              <h4 class="card-title text-center" style="">LOG IN</h4>
-              <form method="POST" action="{{ ('goLogin') }}" class="my-login-validation" novalidate="">
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+                  <div class="text-left mb-4">
+                    <img src="img/Logox.png" alt="logo">
+                  </div>
+                  <h4 class="mt-1 mb-1 pb-1">Login</h4>
+                  <p style="color: #677A96">Welcome back, Please fill your Details</p>
+                 <form method="POST" action="{{ ('login') }}" class="my-login-validation" novalidate="">
                 @csrf
-                <div class="form-group">
-                    <label for="email">Username</label>
-                    <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
-                    <div class="invalid-feedback">
-                        Email is invalid
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="form2Example11"><h6>Username</h6></label>
+                        <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+                        <div class="invalid-feedback">
+                            Email is invalid
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password
-                        <a href="forgot.html" class="float-right">
-                            Forgot Password?
-                        </a>
-                    </label>
-                    <input id="password" type="password" class="form-control" name="password" required data-eye>
-                    <div class="invalid-feedback">
-                        Password is required
+  
+                    <div class="form-outline mb-1 mt-3">
+                        <label class="form-label" for="form2Example22"><h6>Password</h6></label>
+                        <input id="password" type="password" class="form-control" name="password" required data-eye>
+                        <div class="invalid-feedback">
+                            Password is required
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="custom-checkbox custom-control">
-                        <input type="checkbox" name="remember" id="remember" class="custom-control-input">
-                        <label for="remember" class="custom-control-label">Remember Me</label>
-                    </div>
-                </div>
-                <div class="form-group m-0">
-                    <button type="submit" class="btn btn-primary btn-block">
+
+                    <div class="row mb-5">
+                        <div class="col d-flex justify-content-center">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                            <label class="form-check-label" for="form2Example31"> Remember me </label>
+                          </div>
+                        </div>
+                    
+                        <div class="col">
+                          <a href="#!">Forgot password?</a>
+                        </div>
+                      </div>
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button type="submit" class="btn btn-primary btn-block">
                         Login
                     </button>
-                </div>
-                <div class="mt-4 text-center">
-                    Don't have an account? <a href="register.html">Create One</a>
-                </div>
-            </form>            
-        </div>
-        </div>
-        <div class="footer">
-          Copyright &copy; 2023 &mdash; Rio Edotensai 
-        </div>
-				</div>
-			</div>
-		</div>
-	</section>
+                    </div>
+                    <h6 style="font-size: 8px; color: #999999; text-align: center;">@PT BERKAH ANDALAN REKAYASA 2002. All Rights Reserved</h6>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="js/my-login.js"></script>
-</body>
+                  </form>
+                </div>
+              </div>
+              <div class="col-sm-6 px-0 d-none d-sm-block" style="background-color: #f2f2f2;">
+                <img src="img/gambar1.png" alt="Login image" class="w-100 h-100" style="object-fit: cover; object-position: left;">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </html>

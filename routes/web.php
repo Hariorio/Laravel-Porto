@@ -7,7 +7,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\SoalPertama;
 
-Route::post('/goLogin', [LoginController::class, 'goLogin'])->name('goLogin');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::middleware(['web', 'auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
