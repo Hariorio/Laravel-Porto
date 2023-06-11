@@ -10170,6 +10170,7 @@ a:focus {
 
 .topbar {
   height: 4.375rem;
+  border-bottom: 1px solid #D4DCE7;
 }
 
 .topbar #sidebarToggleTop {
@@ -10471,6 +10472,7 @@ a:focus {
 
 .sidebar hr.sidebar-divider {
   margin: 0 1rem 1rem;
+  color: #000000;
 }
 
 .sidebar .sidebar-heading {
@@ -10511,6 +10513,8 @@ a:focus {
 @media (min-width: 768px) {
   .sidebar {
     width: 14rem !important;
+    border-right: 0.5px solid #D4DCE7;
+
   }
   .sidebar .nav-item .collapse {
     position: relative;
@@ -10552,7 +10556,7 @@ a:focus {
     text-align: center;
     float: right;
     vertical-align: 0;
-    border: 0;
+    border: 2;
     font-weight: 900;
     content: '\f107';
     font-family: 'Font Awesome 5 Free';
@@ -10631,7 +10635,7 @@ a:focus {
 }
 
 .sidebar-light hr.sidebar-divider {
-  border-top: 1px solid #eaecf4;
+  border-top: 1px solid #6e707e;
 }
 
 .sidebar-light .sidebar-heading {
@@ -10684,7 +10688,7 @@ a:focus {
 }
 
 .sidebar-dark hr.sidebar-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid #D4DCE7;
 }
 
 .sidebar-dark .sidebar-heading {
